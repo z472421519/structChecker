@@ -16,7 +16,7 @@ TARGET = extracter
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(LD) -o $@ $^ -ldwarf
+	$(LD) -o $@ $^ -ldwarf -lz
 
 %.o:%.cpp
 	$(CXX) -c $^ $(CXXFLAGS) -I./thirdparty/nlohmann
